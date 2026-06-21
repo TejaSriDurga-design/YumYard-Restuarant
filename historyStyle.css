@@ -1,0 +1,136 @@
+/* ===== THEME VARIABLES ===== */
+:root {
+    --primary: #ff6b35;
+    --secondary: #ffb703;
+
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #1e293b;
+
+    --muted: #64748b;
+    --success: #16a34a;
+    --shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* DARK THEME */
+body.dark-mode {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #f8fafc;
+
+    --muted: #cbd5e1;
+    --success: #22c55e;
+    --shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s ease;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: var(--card);
+    box-shadow: var(--shadow);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* ===== FIXED THEME BUTTON (PILL STYLE LIKE HOME/MENU) ===== */
+.hero-btn {
+    border: none;
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(135deg, #ff6b35, #ffb703);
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+}
+
+/* ===== PAGE ===== */
+.history-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.history-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* ===== ORDER CARD ===== */
+.order-card {
+    background: var(--card);
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+}
+
+.order-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.order-card p {
+    margin: 8px 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.order-total {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--success);
+}
+
+/* EMPTY STATE */
+.empty-history {
+    text-align: center;
+    margin-top: 100px;
+    color: var(--muted);
+    font-size: 1.2rem;
+}

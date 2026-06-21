@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History | Yumyard</title>
+
+    <link rel="stylesheet" href="navbarStyle.css">
+    <link rel="stylesheet" href="historyStyle.css">
+    <link rel="stylesheet" href="homeStyle.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🍽 Yumyard
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="history.html">Orders</a></li>
+        </ul>
+
+        <!-- FIXED BUTTON -->
+        <button id="themeBtn" class="hero-btn" onclick="toggleTheme()">
+            🌙
+        </button>
+
+    </nav>
+
+    <h1 class="history-title">📦 Order History</h1>
+
+    <div class="history-container" id="historyContainer"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

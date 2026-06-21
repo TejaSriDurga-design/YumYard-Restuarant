@@ -1,0 +1,246 @@
+*{
+    transition: all .3s ease;
+}
+:root{
+    --primary:#ff6b35;
+    --secondary:#ffb703;
+
+
+    --card:#ffffff;
+    --text:#1e293b;
+}
+.dark-mode .hero-btn{
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+.dark-mode{
+    
+    --card:#1e293b;
+    --text:#f8fafc;
+}
+body.dark-mode {
+    background: #0f172a;
+}
+body{
+
+    background:
+    linear-gradient(
+        180deg,
+        #fff7ed,
+        #fffaf5,
+        #fff1e6
+    );
+
+    color:var(--text);
+
+    min-height:100vh;
+}
+
+
+
+/* MENU GRID */
+
+.menu-section{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+    padding:40px;
+
+    max-width:1400px;
+
+    margin:auto;
+}
+
+/* CARD */
+
+.menu-card{
+    position:relative;
+
+    background:var(--card);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+    cursor:pointer;
+}
+
+
+.menu-card:hover{
+    transform:
+    translateY(-12px)
+    scale(1.02);
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.18);
+}
+
+/* IMAGE */
+
+.menu-card img{
+    width:100%;
+    height:250px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s;
+}
+
+.menu-card:hover img{
+    transform:scale(1.12);
+}
+
+/* CONTENT */
+
+
+/* BUTTON */
+
+.menu-card button{
+    width:calc(100% - 40px);
+
+    margin:20px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ff6b35,
+    #ff8c42
+    );
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.menu-card button:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 10px 20px
+    rgba(255,107,53,.4);
+}
+
+
+/* BADGE */
+
+.badge{
+    position:absolute;
+
+    top:15px;
+    right:15px;
+
+    padding:8px 14px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ff6b35,
+    #ffb703
+    );
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    box-shadow:
+    0 5px 15px rgba(255,107,53,.4);
+}
+/* ===== FOOD RATING ===== */
+
+.rating{
+    display:inline-block;
+
+    margin:15px 20px 0;
+
+    padding:6px 12px;
+
+    background:#fff7ed;
+
+    color:#ff6b00;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+}
+/* FOOD INFO AREA */
+
+.food-info{
+    padding:20px;
+}
+
+.food-info h3{
+
+    font-size:22x;
+
+    margin:12px 0;
+
+    color:var(--text);
+
+    font-weight:700;
+
+    line-height:1.3;
+}
+
+.food-info p{
+    font-size:25px;
+    color:#ff7a3d;
+    font-weight:800;
+}
+
+/* DARK MODE */
+
+.dark-mode .menu-card{
+    background:#1e293b;
+}
+
+.dark-mode .food-info h3{
+    color:white;
+}
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.menu-card{
+
+    animation:
+    fadeUp .6s ease;
+}
