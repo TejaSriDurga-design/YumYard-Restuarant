@@ -1,0 +1,265 @@
+/* HERO */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.hero {
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: #fff;
+
+    background: url("https://t3.ftcdn.net/jpg/03/50/31/20/360_F_350312048_JEZzQ924XlGTsojotcbMdZFPq4EdMYvW.jpg") center/cover no-repeat;
+}
+
+/* Premium layered overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.75)
+    );
+    z-index: 1;
+}
+
+/* subtle luxury glow */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 200, 120, 0.08),
+        transparent 60%
+    );
+    z-index: 2;
+}
+
+/* content layer */
+.hero > * {
+    position: relative;
+    z-index: 3;
+}
+
+/* optional premium text feel */
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 10px auto 0;
+}
+
+/* subtle zoom effect */
+.hero {
+    animation: heroZoom 12s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+    from {
+        background-size: 100%;
+    }
+    to {
+        background-size: 110%;
+    }
+}
+.hero-content h1{
+    font-size:72px;
+    font-weight:800;
+    line-height:1.1;
+}
+
+.hero-content p{
+    font-size:22px;
+    opacity:.9;
+}
+
+
+.hero-btn{
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff6b35,
+        #ffb703
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+}
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about{
+
+    padding:70px 30px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        180deg,
+        #fffaf5,
+        #fff7ed
+    );
+}
+
+.about h2{
+
+    font-size:2.5rem;
+
+    color:#ff6b35;
+
+    margin-bottom:20px;
+}
+
+.about p{
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+
+.features{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+    padding:40px 60px;
+
+    width:100%;
+}
+
+.feature-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s ease;
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 20px 40px rgba(255,107,53,.15);
+}
+
+.feature-card h3{
+
+    margin:15px 0;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark-mode .about{
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+
+    color:white;
+}
+
+.dark-mode .about h2{
+
+    color:#ffb703;
+}
+
+.dark-mode .features{
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+}
+
+.dark-mode .feature-card{
+
+    background:#1e293b;
+
+    color:white;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.35);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:linear-gradient(
+    135deg,
+    #ff6b35,
+    #ff9f1c
+);
+
+    color:white;
+
+    text-align:center;
+
+    padding:50px 20px;
+}

@@ -1,0 +1,121 @@
+.search-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px 20px;
+}
+
+#searchBox{
+
+    width:70%;
+
+    padding:18px 25px;
+
+    border:none;
+
+    border-radius:60px;
+
+    font-size:16px;
+
+    background:white;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+
+    outline:none;
+}
+
+#searchBox:focus{
+    box-shadow:
+    0 10px 30px rgba(255,107,53,.25);
+}
+
+.dark-mode #searchBox{
+    background:#1e293b;
+    color:white;
+}
+/* ===== CATEGORY BUTTONS ===== */
+
+.category-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:25px 0;
+}
+
+.category-buttons button{
+    border:none;
+    padding:12px 20px;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:#334155;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.category-buttons button:hover{
+    transform:translateY(-3px);
+
+    background:#ff6b35;
+    color:white;
+}
+
+/* ===== VEG / NON VEG FILTER ===== */
+
+.filters{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+
+    margin-bottom:30px;
+}
+
+.filters button{
+    border:none;
+
+    padding:10px 24px;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:#334155;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.filters button:hover{
+    background:#ff6b35;
+    color:white;
+}
+
+/* ===== DARK MODE ===== */
+
+.dark-mode .category-buttons button,
+.dark-mode .filters button{
+    background:#1e293b;
+    color:white;
+}
+
+.dark-mode .category-buttons button:hover,
+.dark-mode .filters button:hover{
+    background:#ff6b35;
+}

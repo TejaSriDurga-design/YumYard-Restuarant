@@ -1,0 +1,183 @@
+/* =========================
+   COMMON NAVBAR
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.navbar,
+.navbar *{
+    font-family:Arial,sans-serif;
+}
+
+.navbar{
+    display:grid;
+
+    grid-template-columns:1fr auto 1fr;
+
+    align-items:center;
+
+    padding:18px 55px;
+
+    min-height:82px;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    background:#fff;
+
+    box-shadow:0 2px 20px rgba(0,0,0,.06);
+}
+
+.dark-mode .navbar{
+    background:rgba(15,23,42,.85);
+}
+.dark-mode .nav-links a{
+    color: white;
+}
+
+/* ---------- LOGO ---------- */
+.logo{
+    justify-self:start;
+
+    font-size:30px;
+    font-weight:800;
+    color:#ff6b35;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+.nav-links{
+    display:flex;
+
+    justify-self:center;
+
+    gap:35px;
+
+    list-style:none;
+}
+
+.nav-links li{
+    list-style:none;
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:#334155;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    padding-bottom:5px;
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ff6b35;
+}
+
+.nav-links a.active{
+
+    color:#ff6b35;
+
+    border-bottom:3px solid #ff6b35;
+}
+
+.dark-mode .nav-links a{
+
+    color:white;
+}
+
+.dark-mode .nav-links a.active{
+
+    color:#ffb703;
+
+    border-bottom-color:#ffb703;
+}
+
+/* ---------- RIGHT SIDE ---------- */
+.menu-buttons{
+    justify-self:end;
+
+    display:flex;
+
+    gap:12px;
+}
+
+/* works for pages without cart too */
+#themeBtn{
+
+    width:48px;
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.cart-btn{
+
+    width:48px;
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+#themeBtn:hover,
+.cart-btn:hover{
+
+    transform:translateY(-3px);
+}
+
+.dark-mode #themeBtn,
+.dark-mode .cart-btn{
+
+    background:#1e293b;
+
+    color:white;
+}
